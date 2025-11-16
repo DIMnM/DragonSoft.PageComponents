@@ -7,14 +7,14 @@
 
 		<!-- NuGet Package Informationen -->
 		<PackageId>DragonSoft.PageComponents</PackageId>
-		<Version>1.0.0</Version>
+		<Version>1.1.0</Version>
 		<Authors>Kenthanar</Authors>
 		<Company>DragonSoft</Company>
 		<Description>Wiederverwendbare UI-Komponenten für Blazor/Razor mit .NET 10.0</Description>
 		<PackageTags>blazor;razor;components;ui;net10</PackageTags>
-		<RepositoryUrl>https://github.com/deinusername/dein-repo</RepositoryUrl>
+		<RepositoryUrl>https://github.com/DIMnM/DragonSoft.PageComponents</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/deinusername/dein-repo</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/DIMnM/DragonSoft.PageComponents</PackageProjectUrl>
 
 		<!-- Symbole für Debugging -->
 		<IncludeSymbols>true</IncludeSymbols>

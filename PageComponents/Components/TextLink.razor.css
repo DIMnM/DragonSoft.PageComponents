@@ -1,0 +1,14 @@
+﻿a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+    a:hover {
+        text-decoration: none;
+        text-shadow: 0 0 15px #bf4514;
+        font-size: large;
+        transform: translateY(-5px);
+    }

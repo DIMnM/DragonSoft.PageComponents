@@ -1,0 +1,51 @@
+﻿/* Basis-Grid - IMMER display: grid */
+.base-grid {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Preset: Large (350px) - für Overview */
+.grid-x-large {
+    grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
+}
+
+/* Preset: Large (350px) - für Overview */
+.grid-large {
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+}
+
+/* Preset: Medium (300px) - Standard für News, QuickLinks, Activities, Contact */
+.grid-medium {
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+}
+
+/* Preset: Small (250px) - für Values, Principles, Team */
+.grid-small {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+/* Preset: Compact (280px) - für FAQ */
+.grid-compact {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+/* Preset: Single Column - für Legal */
+.grid-single {
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 576px) {
+    .base-grid {
+        gap: 1rem;
+    }
+
+    /* Auf Mobile alle Grids auf 1 Spalte */
+    .grid-large,
+    .grid-medium,
+    .grid-small,
+    .grid-compact,
+    grid-single {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,26 @@
+﻿@switch (Level)
+{
+    case 1:
+        <h1 class="titel titel-h1 @GetAlignmentClass() @CssClass @Style">@ChildContent</h1>
+        break;
+    case 2:
+        <h2 class="titel titel-h2 @GetAlignmentClass() @CssClass @Style">@ChildContent</h2>
+        break;
+    case 3:
+        <h3 class="titel titel-h3 @GetAlignmentClass() @CssClass @Style">@ChildContent</h3>
+        break;
+    case 4:
+        <h4 class="titel titel-h4 @GetAlignmentClass() @CssClass @Style">@ChildContent</h4>
+        break;
+    case 5:
+        <h5 class="titel titel-h5 @GetAlignmentClass() @CssClass @Style">@ChildContent</h5>
+        break;
+    case 6:
+        <h6 class="titel titel-h6 @GetAlignmentClass() @CssClass @Style">@ChildContent</h6>
+        break;
+    default:
+        <h2 class="titel titel-h2 @GetAlignmentClass() @CssClass">@ChildContent</h2>
+        break;
+}
+
+

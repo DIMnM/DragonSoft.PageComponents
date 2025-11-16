@@ -1,0 +1,22 @@
+﻿.text-content {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.text-bold {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.text-muted {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+.text-highlight {
+    background: var(--primary-transparent-low);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: var(--text-primary);
+}

@@ -1,0 +1,28 @@
+﻿@if (!string.IsNullOrEmpty(Href))
+{
+    <a href="@Href"
+       class="btn btn-@Variant.ToString().ToLower() @CssClass"
+       target="@Target"
+       @onclick="OnClick">
+        @if (!string.IsNullOrEmpty(Icon))
+        {
+            <i class="@Icon"></i>
+        }
+        @ChildContent
+    </a>
+}
+else
+{
+    <button type="@Type"
+            class="btn btn-@Variant.ToString().ToLower() @CssClass"
+            @onclick="OnClick"
+            disabled="@Disabled">
+        @if (!string.IsNullOrEmpty(Icon))
+        {
+            <i class="@Icon"></i>
+        }
+        @ChildContent
+    </button>
+}
+
+

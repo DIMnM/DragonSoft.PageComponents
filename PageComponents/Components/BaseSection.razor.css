@@ -1,0 +1,10 @@
+﻿.base-section {
+    margin-bottom: 4rem;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    .base-section {
+        margin-bottom: 2rem;
+    }
+}

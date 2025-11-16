@@ -1,0 +1,12 @@
+﻿<TextLink href="@($"https://t.me/{Username}")" target="_blank">
+    @if (ChildContent is null)
+    {
+        @(string.IsNullOrEmpty(DisplayName) ? Username : DisplayName)
+    }
+    else
+    {
+        @ChildContent
+    }
+</TextLink>
+
+

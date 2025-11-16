@@ -38,7 +38,12 @@
     --error-color: hsl(0, 100%, 60%);
     --valid-color: hsl(141, 100%, 60%);
     --warning-color: hsl(54, 100%, 60%);
+    --warning-color-hover: hsl(45, 100%, 66%);
     --info-color: hsl(207, 100%, 60%);
+    --success-color: hsl(134, 61%, 61%);
+    --success-color-hover: hsl(133, 61%, 66%);
+    --danger-color: hsl(354, 71%, 53%);
+    --danger-color-hover: hsl(354 68% 57%);
 }
 
 /* ========================================
@@ -81,7 +86,12 @@
         --error-color: hsl(0, 100%, 40%);
         --valid-color: hsl(141, 100%, 40%);
         --warning-color: hsl(54, 100%, 40%);
+        --warning-color-hover: hsl(45, 100%, 44%);
         --info-color: hsl(207, 100%, 40%);
+        --success-color: hsl(134, 61%, 41%);
+        --success-color-hover: hsl(133, 61%, 33%);
+        --danger-color: hsl(354, 71%, 47%);
+        --danger-color-hover: hsl(354 68% 43%);
     }
 }
 

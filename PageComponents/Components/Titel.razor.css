@@ -1,0 +1,91 @@
+﻿.titel {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 0 3px 7px var(--bg-primary);
+}
+
+/* H1 */
+.titel-h1 {
+    font-weight: 900;
+    font-size: 3.125rem; /* 50px */
+    padding: 0.5rem 1.25rem;
+    margin-top: 1.2rem;
+}
+
+/* H2 */
+.titel-h2 {
+    font-weight: 800;
+    font-size: 2.5rem; /* 40px */
+    padding: 0.45rem 1.25rem;
+    margin-bottom: 1.2rem;
+}
+
+/* H3 */
+.titel-h3 {
+    font-weight: 700;
+    font-size: 2rem; /* 32px */
+    padding: 0.45rem 1.25rem;
+    margin-bottom: 0;
+}
+
+/* H4 */
+.titel-h4 {
+    font-weight: 700;
+    font-size: 1.4rem; /* ~22px */
+    padding: 0.45rem 1.25rem;
+}
+
+/* H5 */
+.titel-h5 {
+    font-weight: 600;
+    font-size: 1.25rem; /* 20px */
+    padding: 0.35rem 1rem;
+}
+
+/* H6 */
+.titel-h6 {
+    font-weight: 600;
+    font-size: 1rem; /* 16px */
+    padding: 0.25rem 0.75rem;
+}
+
+/* Ausrichtungen */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titel-h1 {
+        font-size: 2.5rem; /* 40px */
+    }
+
+    .titel-h2 {
+        font-size: 2rem; /* 32px */
+    }
+
+    .titel-h3 {
+        font-size: 1.75rem; /* 28px */
+    }
+
+    .titel-h4 {
+        font-size: 1.25rem; /* 20px */
+    }
+}
