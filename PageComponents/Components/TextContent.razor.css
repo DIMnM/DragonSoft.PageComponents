@@ -9,8 +9,12 @@
     color: var(--text-primary);
 }
 
+.text-italic {
+    font-style: italic;
+}
+
 .text-muted {
-    color: var(--text-muted);
+    color: var(--text-tertiary);
     opacity: 0.8;
 }
 

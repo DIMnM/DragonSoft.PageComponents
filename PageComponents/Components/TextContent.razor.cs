@@ -27,6 +27,7 @@ public partial class TextContent
         TextVariant.Bold => "text-bold",
         TextVariant.Muted => "text-muted",
         TextVariant.Highlight => "text-highlight",
+        TextVariant.Italic => "text-italic",
         _ => ""
     };
 }
@@ -36,5 +37,6 @@ public enum TextVariant
     Default,
     Bold,
     Muted,
-    Highlight
+    Highlight,
+    Italic
 }

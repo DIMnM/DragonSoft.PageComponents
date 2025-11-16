@@ -1,3 +1,28 @@
-﻿<p class="text-content @VariantClass @CssClass">
-    @ChildContent
-</p>
+﻿@switch (VariantClass)
+{
+    case "text-highlight":
+        <p class="text-content text-highlight @CssClass">
+            @ChildContent
+        </p>
+        break;
+    case "text-muted":
+        <p class="text-content text-muted @CssClass">
+            @ChildContent
+        </p>
+        break;
+    case "text-bold":
+        <strong class="text-content text-bold @CssClass">
+            @ChildContent
+        </strong>
+        break;
+    case "text-italic":
+        <i class="text-content text-italic @CssClass">
+        @ChildContent
+        </i>
+        break;
+    default:
+        <p class="text-content @VariantClass @CssClass">
+            @ChildContent
+        </p>
+        break;
+}
