@@ -1,0 +1,326 @@
+﻿.base-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .base-card:hover {
+        border-color: var(--border-secondary);
+    }
+
+/* ============================================
+   CARD HEADER - Basis-Styles
+   ============================================ */
+.card-header {
+    margin-bottom: 1.5rem;
+}
+
+    /* WICHTIG: Default Layout explizit nur für .card-header OHNE Layout-Klasse */
+    .card-header:not(.header-space-between):not(.header-space-around):not(.header-space-evenly):not(.header-center):not(.header-start):not(.header-end) {
+        display: block;
+    }
+
+    /* Header Layout: Flex-basierte Layouts */
+    /* WICHTIG: Mit .card-header kombinieren für höhere Spezifität! */
+    .card-header.header-space-between,
+    .card-header.header-space-around,
+    .card-header.header-space-evenly,
+    .card-header.header-center,
+    .card-header.header-start,
+    .card-header.header-end {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    /* Spezifische Layouts */
+    .card-header.header-space-between {
+        justify-content: space-between;
+    }
+
+    .card-header.header-space-around {
+        justify-content: space-around;
+    }
+
+    .card-header.header-space-evenly {
+        justify-content: space-evenly;
+    }
+
+    .card-header.header-center {
+        justify-content: center;
+    }
+
+    .card-header.header-start {
+        justify-content: flex-start;
+    }
+
+    .card-header.header-end {
+        justify-content: flex-end;
+    }
+
+    /* Vertikale Ausrichtung */
+    .card-header.align-start,
+    .card-footer.align-start {
+        align-items: flex-start;
+    }
+
+    .card-header.align-center,
+    .card-footer.align-center {
+        align-items: center;
+    }
+
+    .card-header.align-end,
+    .card-footer.align-end {
+        align-items: flex-end;
+    }
+
+    .card-header.align-stretch,
+    .card-footer.align-stretch {
+        align-items: stretch;
+    }
+
+/* ============================================
+   CARD BODY
+   ============================================ */
+.card-body {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   CARD FOOTER - Basis-Styles
+   ============================================ */
+.card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-primary);
+}
+
+    /* WICHTIG: Default Layout explizit nur für .card-footer OHNE Layout-Klasse */
+    .card-footer:not(.footer-space-between):not(.footer-space-around):not(.footer-space-evenly):not(.footer-center):not(.footer-start):not(.footer-end) {
+        display: block;
+    }
+
+    /* Footer Layout: Flex-basierte Layouts */
+    /* WICHTIG: Mit .card-footer kombinieren für höhere Spezifität! */
+    .card-footer.footer-space-between,
+    .card-footer.footer-space-around,
+    .card-footer.footer-space-evenly,
+    .card-footer.footer-center,
+    .card-footer.footer-start,
+    .card-footer.footer-end {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* Spezifische Layouts */
+    .card-footer.footer-space-between {
+        justify-content: space-between;
+    }
+
+    .card-footer.footer-space-around {
+        justify-content: space-around;
+    }
+
+    .card-footer.footer-space-evenly {
+        justify-content: space-evenly;
+    }
+
+    .card-footer.footer-center {
+        justify-content: center;
+    }
+
+    .card-footer.footer-start {
+        justify-content: flex-start;
+    }
+
+    .card-footer.footer-end {
+        justify-content: flex-end;
+    }
+
+/* Varianten */
+.card-highlighted {
+    border-left: 5px solid var(--secondary-color);
+    border: 2px solid var(--border-primary);
+}
+
+.card-warning {
+    border-left: 5px solid var(--warning-color);
+}
+
+.card-warning-sub {
+    border-left: 5px solid var(--border-primary);
+    background: var(--bg-tertiary);
+}
+
+    .card-warning-sub:hover {
+        border-left: 5px solid var(--warning-color);
+    }
+
+.card-event {
+    border: 2px solid var(--border-primary);
+}
+
+div.card-header.header-space-between {
+    flex-direction: row
+}
+
+.card-event:hover {
+    box-shadow: 0 5px 15px var(--secondary-transparent);
+}
+
+.card-news {
+    border-left: 5px solid var(--border-primary);
+}
+
+    .card-news:hover {
+        border-left: 5px solid var(--secondary-color);
+    }
+
+.card-news-sub {
+    border-left: 5px solid var(--border-primary);
+    background: var(--bg-tertiary);
+}
+
+    .card-news-sub:hover {
+        border-left: 5px solid var(--secondary-color);
+    }
+
+.card-note {
+    background: var(--primary-transparent-low);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    margin-top: 1.5rem;
+    color: var(--text-secondary)
+}
+
+
+.card-detail {
+    border: 2px solid var(--border-primary);
+}
+
+    .card-detail:hover {
+        border: 2px solid var(--border-secondary);
+        box-shadow: 0 5px 15px var(--medium-gray);
+    }
+
+.card-consequences {
+    border-left: 5px solid var(--warning-color);
+    border: 2px solid var(--border-primary);
+}
+
+.card-sub {
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 3px 10px var(--medium-gray);
+    margin-top: 2rem;
+}
+
+.card-hero {
+    background: var(--primary-color);
+    text-align: center;
+}
+
+.card-cta {
+    text-align: center;
+    padding: 3rem 2rem 1rem 2rem;
+    background: linear-gradient(16deg, var(--bg-secondary) 45%, var(--primary-color) 100%);
+    color: var(--text-primary);
+    border-radius: 15px;
+}
+
+    .card-cta:hover {
+        box-shadow: 0 5px 15px var(--secondary-color);
+    }
+
+.card-join {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--primary-color) 100%);
+    color: var(--text-white);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+    .card-join:hover {
+        box-shadow: 0 5px 15px var(--secondary-color);
+    }
+
+.card-contact {
+    text-align: center;
+    padding: 1.5rem 2rem 3rem 2rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-secondary);
+    border-radius: 15px;
+    transition: border-color 0.3s ease;
+}
+
+    .card-contact:hover {
+        box-shadow: 0 5px 15px var(--medium-gray);
+        border: 2px solid var(--border-tertiary);
+    }
+
+.card-legal {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-primary);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    padding-left: 5rem;
+    transition: all 0.3s ease;
+}
+
+    .card-legal:hover {
+        border-color: var(--border-secondary);
+        box-shadow: 0 5px 15px var(--medium-gray);
+    }
+
+.card-rules {
+    background: var(--bg-secondary);
+    border-left: 5px solid var(--border-primary);
+    border-radius: 10px;
+    padding: .5rem;
+    position: relative;
+    padding: 2.1rem 1.8rem 2.1rem 3.2rem;
+    transition: all 0.3s ease;
+}
+
+    .card-rules:hover {
+        border-color: var(--secondary-color);
+        box-shadow: 0 5px 15px var(--medium-gray);
+    }
+
+.card-rules-sub {
+    background: var(--bg-tertiary);
+    border-left: 5px solid var(--border-primary);
+    transition: all 0.3s ease;
+}
+
+    .card-rules-sub:hover {
+        border-color: var(--warning-color);
+        box-shadow: 0 3px 8px var(--error-color);
+    }
+
+.card-info {
+    background: var(--primary-transparent-low);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .base-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}

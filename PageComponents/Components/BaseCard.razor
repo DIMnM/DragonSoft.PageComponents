@@ -1,0 +1,20 @@
+﻿<div class="base-card @VariantClass @CssClass">
+    @if (ShowHeader && HeaderContent != null)
+    {
+        <div class="card-header @HeaderLayoutClass">
+            @HeaderContent
+        </div>
+    }
+
+    <div class="card-body">
+        @ChildContent
+    </div>
+
+    @if (ShowFooter && FooterContent != null)
+    {
+        <div class="card-footer @FooterLayoutClass">
+            @FooterContent
+        </div>
+    }
+</div>
+

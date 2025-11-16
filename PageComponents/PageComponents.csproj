@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- NuGet Package Informationen -->
+		<PackageId>DragonSoft.PageComponents</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Kenthanar</Authors>
+		<Company>DragonSoft</Company>
+		<Description>Wiederverwendbare UI-Komponenten für Blazor/Razor mit .NET 10.0</Description>
+		<PackageTags>blazor;razor;components;ui;net10</PackageTags>
+		<RepositoryUrl>https://github.com/deinusername/dein-repo</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/deinusername/dein-repo</PackageProjectUrl>
+
+		<!-- Symbole für Debugging -->
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+		<!-- README inkludieren -->
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
+		<!-- Release Notes -->
+		<PackageReleaseNotes>Initiales Release für .NET 10.0</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<!-- README zur Package hinzufügen -->
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<!-- Statische Assets (CSS, JS) inkludieren -->
+	<ItemGroup>
+		<Content Update="wwwroot\**\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\js\" />
+	</ItemGroup>
+
+</Project>
