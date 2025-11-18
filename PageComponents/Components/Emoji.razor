@@ -1,25 +1,67 @@
 ﻿@switch (Level)
 {
-	case 1:
-		<span class="emoji-component @Class" style="font-size: 1rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
-		break;
-	case 2:
-		<span class="emoji-component @Class" style="font-size: 2rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
-		break;
-	case 3:
-		<span class="emoji-component @Class" style="font-size: 3rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
-		break;
-	case 4:
-		<span class="emoji-component @Class" style="font-size: 4rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
-		break;
-	case 5:
-		<span class="emoji-component @Class" style="font-size: 5rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
-		break;
-	case 6:
-		<span class="emoji-component @Class" style="font-size: 6rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
-		break;
-	default:
-		<span class="emoji-component @Class" style="@Style" @attributes="AdditionalAttributes">@EmojiChar</span>
-		break;
+    case 1:
+        if (Shadow)
+        {
+            <span class="@Class shadow" style="font-size: 1rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        else
+        {
+            <span class="@Class" style="font-size: 1rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        break;
+    case 2:
+        if (Shadow)
+        {
+            <span class="@Class shadow" style="font-size: 2rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        else
+        {
+            <span class="@Class" style="font-size: 2rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        break;
+    case 3:
+        if (Shadow)
+        {
+            <span class="@Class shadow" style="font-size: 3rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        else
+        {
+            <span class="@Class" style="font-size: 3rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        break;
+    case 4:
+        if (Shadow)
+        {
+            <span class="@Class shadow" style="font-size: 4rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        else
+        {
+            <span class="@Class" style="font-size: 4rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        break;
+    case 5:
+        if (Shadow)
+        {
+            <span class="@Class shadow" style="font-size: 5rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        else
+        {
+            <span class="@Class" style="font-size: 5rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        break;
+    case 6:
+        if (Shadow)
+        {
+            <span class="@Class shadow" style="font-size: 6rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        else
+        {
+            <span class="@Class" style="font-size: 6rem; @Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        }
+        break;
+    default:
+        <span class="@Class" style="@Style" @attributes="AdditionalAttributes">@EmojiChar</span>
+        break;
 }
 

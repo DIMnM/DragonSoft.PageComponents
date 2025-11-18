@@ -22,6 +22,9 @@ public partial class TextContent
     [Parameter]
     public string? CssClass { get; set; }
 
+    [Parameter]
+    public string? Style { get; set; }
+
     private string VariantClass => Variant switch
     {
         TextVariant.Bold => "text-bold",

@@ -1,0 +1,4 @@
+﻿.shadow {
+    text-shadow: 0 3px 7px var(--bg-primary);
+    box-shadow: 0 0 0 transparent !important;
+}
