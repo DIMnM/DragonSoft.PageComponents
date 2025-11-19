@@ -707,7 +707,7 @@ Dieses Projekt ist unter der **MIT-Lizenz** lizenziert - siehe [LICENSE.txt](LIC
 
 ---
 
-**Version:** 1.1.8
+**Version:** 1.1.9
 **Target Framework:** .NET 10.0  
 **Package ID:** DragonSoft.PageComponents  
 **Repository:** [GitHub](https://github.com/DIMnM/DragonSoft.PageComponents)
