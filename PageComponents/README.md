@@ -283,7 +283,7 @@ Einfacher Section-Wrapper mit konsistentem Margin für strukturierte Layouts.
 
 ### TextContent
 
-Formatierte Text-Komponente mit verschiedenen Stil-Varianten.
+Formatierte Text-Komponente mit verschiedenen Stil-Varianten, flexibler Ausrichtung und Spacing-Kontrolle.
 
 #### Parameter
 
@@ -291,7 +291,12 @@ Formatierte Text-Komponente mit verschiedenen Stil-Varianten.
 |-----------|-----|----------|--------------|
 | `ChildContent` | RenderFragment | - | Text-Inhalt |
 | `Variant` | TextVariant | Default | Text-Stil |
+| `Alignment` | TextAlignment | Left | Textausrichtung |
+| `Display` | DisplayMode | Block | Display-Modus |
+| `Padding` | SpacingSize | Default | Padding-Größe |
+| `Margin` | SpacingSize | Default | Margin-Größe |
 | `CssClass` | string | "" | Zusätzliche CSS-Klassen |
+| `Style` | string | "" | Inline-Styles |
 
 #### Varianten
 
@@ -303,12 +308,56 @@ Formatierte Text-Komponente mit verschiedenen Stil-Varianten.
 | `Muted` | Gedämpfter Text | `<p>` |
 | `Highlight` | Hervorgehoben | `<p>` |
 
-#### Beispiel
+#### TextAlignment-Optionen
+
+- `Left` - Linksbündig
+- `Center` - Zentriert
+- `Right` - Rechtsbündig
+- `Justify` - Blocksatz
+
+#### DisplayMode-Optionen
+
+| Mode | Beschreibung |
+|------|--------------|
+| `Block` | Block-Element (neue Zeile) |
+| `Inline` | Inline-Element (im Textfluss) |
+| `InlineBlock` | Inline-Block (kombiniert beide) |
+
+#### SpacingSize-Optionen
+
+| Größe | Padding | Margin |
+|-------|---------|--------|
+| `Default` | Standard | Standard (1rem) |
+| `None` | 0 | 0 |
+| `Small` | 0.5rem | 0.5rem |
+| `Medium` | 1rem | 1rem |
+| `Large` | 1.5rem | 2rem |
+
+#### Beispiele
 
 ```razor
+<!-- Normaler Text -->
 <TextContent>Normaler Text</TextContent>
-<TextContent Variant="TextVariant.Bold">Fetter Text</TextContent>
-<TextContent Variant="TextVariant.Highlight">Hervorgehobener Text</TextContent>
+
+<!-- Fetter, zentrierter Text -->
+<TextContent Variant="TextVariant.Bold" Alignment="TextAlignment.Center">
+    Fetter, zentrierter Text
+</TextContent>
+
+<!-- Hervorgehobener Text mit großem Margin -->
+<TextContent Variant="TextVariant.Highlight" Margin="SpacingSize.Large">
+    Hervorgehobener Text
+</TextContent>
+
+<!-- Inline-Text mit kleinem Padding -->
+<TextContent Display="DisplayMode.Inline" Padding="SpacingSize.Small">
+    Inline-Text
+</TextContent>
+
+<!-- Gedämpfter Text rechtsbündig -->
+<TextContent Variant="TextVariant.Muted" Alignment="TextAlignment.Right">
+    Gedämpfter rechtsbündiger Text
+</TextContent>
 ```
 
 ---
@@ -384,7 +433,7 @@ Vielseitige Button-Komponente mit mehreren Varianten, optional als Link verwendb
 
 ### Emoji
 
-Emoji-Anzeige-Komponente mit verschiedenen Größen-Levels.
+Emoji-Anzeige-Komponente mit verschiedenen Größen-Levels, optionalem Schatten und Unterstützung für zusätzliche HTML-Attribute.
 
 #### Parameter
 
@@ -392,8 +441,10 @@ Emoji-Anzeige-Komponente mit verschiedenen Größen-Levels.
 |-----------|-----|----------|--------------|
 | `EmojiChar` | string | "" | Emoji-Zeichen |
 | `Level` | int | 0 | Größen-Level (0-6) |
+| `Shadow` | bool | false | Text-Schatten aktivieren |
 | `Class` | string | "" | CSS-Klassen |
 | `Style` | string | "" | Inline-Styles |
+| `AdditionalAttributes` | Dictionary<string, object>? | null | Zusätzliche HTML-Attribute |
 
 #### Größen-Levels
 
@@ -413,18 +464,55 @@ Die Komponente bietet über 200 vordefinierte Emoji-Konstanten in der `Emojis`-K
 
 ```razor
 <Emoji EmojiChar="@Emojis.Rocket" Level="3" />
-<Emoji EmojiChar="@Emojis.Fire" Level="2" />
+<Emoji EmojiChar="@Emojis.Fire" Level="2" Shadow="true" />
 <Emoji EmojiChar="🎉" Level="4" />
 ```
 
 **Beliebte Emojis:**
-- `Emojis.Rocket` 🚀
-- `Emojis.Fire` 🔥
-- `Emojis.Star` ⭐
-- `Emojis.Heart` ❤️
-- `Emojis.Check` ✅
-- `Emojis.Warning` ⚠️
-- [und über 200 weitere...](siehe Emojis.cs)
+- `Emojis.Rocket` 🚀 - Rakete
+- `Emojis.Fire` 🔥 - Feuer
+- `Emojis.Star` ⭐ - Stern
+- `Emojis.RedHeart` ❤️ - Rotes Herz
+- `Emojis.CircleWithCheck` ✅ - Häkchen
+- `Emojis.Warning` ⚠️ - Warnung
+- `Emojis.LightBulb` 💡 - Glühbirne
+- `Emojis.Trophy` 🏆 - Trophäe
+- `Emojis.Target` 🎯 - Zielscheibe
+- `Emojis.Sparkles` ✨ - Funkeln
+
+#### Kategorien
+
+Die Emoji-Konstanten sind in verschiedene Kategorien unterteilt:
+
+- **Transport:** Airplane, Car, Rocket, Ship, Train, Bicycle
+- **Tiere:** Cat, Dog, Dragon, Butterfly, Bird, Bear
+- **Essen:** Pizza, Burger, Coffee, IceCream, Sushi
+- **Natur:** Sun, Moon, Star, Rainbow, Tree, Flower
+- **Symbole:** Heart, CheckMark, Warning, Info, Fire
+- **Aktivitäten:** Gaming, Music, Sports, Party
+- **Objekte:** Book, Camera, Phone, Computer
+- **Farben:** RedSquare, BlueSquare, GreenSquare (mit Heart-Varianten)
+
+Für die vollständige Liste siehe [Emojis.cs](PageComponents/Components/Emojis.cs) - über 200 Emojis verfügbar!
+
+#### Beispiele
+
+```razor
+<!-- Einfaches Emoji -->
+<Emoji EmojiChar="@Emojis.Rocket" Level="2" />
+
+<!-- Emoji mit Schatten -->
+<Emoji EmojiChar="@Emojis.Star" Level="3" Shadow="true" />
+
+<!-- Großes Emoji mit Custom-Klasse -->
+<Emoji EmojiChar="@Emojis.Fire" Level="5" Class="my-custom-class" />
+
+<!-- Emoji mit zusätzlichen Attributen -->
+<Emoji EmojiChar="@Emojis.Heart" 
+       Level="2" 
+       Shadow="true"
+       AdditionalAttributes="@(new Dictionary<string, object> { { "data-tooltip", "Gefällt mir" } })" />
+```
 
 ---
 
@@ -470,7 +558,7 @@ Nummerierte Badge-Komponente für Karten (positioniert oben links).
 
 ### TelegramLink
 
-Vorgefertigter Link zu Telegram-Profilen.
+Vorgefertigter Link zu Telegram-Profilen mit flexiblen Anzeige-Optionen.
 
 #### Parameter
 
@@ -483,8 +571,13 @@ Vorgefertigter Link zu Telegram-Profilen.
 #### Beispiel
 
 ```razor
+<!-- Einfacher Link mit Username -->
 <TelegramLink Username="meinusername" />
+
+<!-- Link mit Display-Name -->
 <TelegramLink Username="meinusername" DisplayName="Mein Name" />
+
+<!-- Link mit Custom Content -->
 <TelegramLink Username="meinusername">
     <Emoji EmojiChar="@Emojis.Chat" Level="1" /> Kontaktiere mich
 </TelegramLink>
@@ -528,6 +621,16 @@ Die Komponenten nutzen CSS Custom Properties für vollständige Anpassbarkeit:
     --text-primary: hsl(0, 0%, 10%);    /* Haupttext */
     --text-secondary: hsl(0, 0%, 25%);  /* Sekundärtext */
     --text-tertiary: hsl(0, 0%, 40%);   /* Tertiärtext */
+}
+```
+
+#### Abgrenzungsfarben
+
+```css
+:root {
+    --border-primary: hsl(0, 0%, 75%);
+    --border-secondary: hsl(0, 0%, 50%);
+    --border-tertiary: hsl(0, 0%, 25%);
 }
 ```
 
@@ -611,7 +714,7 @@ dotnet add package DragonSoft.PageComponents --source LocalFeed
 
 <BaseSection>
     <Titel Level="1" Alignment="TextAlignment.Center">
-        <Emoji EmojiChar="@Emojis.Rocket" Level="2" />
+        <Emoji EmojiChar="@Emojis.Rocket" Level="2" Shadow="true" />
         Willkommen
     </Titel>
 
@@ -623,6 +726,9 @@ dotnet add package DragonSoft.PageComponents --source LocalFeed
             </HeaderContent>
             <ChildContent>
                 <TextContent>Beschreibung des ersten Features.</TextContent>
+                <TextContent Variant="TextVariant.Highlight" Margin="SpacingSize.Large">
+                    Besonders wichtig!
+                </TextContent>
             </ChildContent>
             <FooterContent>
                 <Button Variant="ButtonVariant.Primary" Href="/feature1">
@@ -633,10 +739,12 @@ dotnet add package DragonSoft.PageComponents --source LocalFeed
 
         <BaseCard Variant="CardVariant.News">
             <HeaderContent>
-                <Titel Level="3">Neuigkeiten</Titel>
+                <Titel Level="3">
+                    <Emoji EmojiChar="@Emojis.Announcement" Level="1" /> Neuigkeiten
+                </Titel>
             </HeaderContent>
             <ChildContent>
-                <TextContent Variant="TextVariant.Bold">
+                <TextContent Variant="TextVariant.Bold" Alignment="TextAlignment.Center">
                     Aktuelle Updates
                 </TextContent>
                 <TextContent>
@@ -647,12 +755,16 @@ dotnet add package DragonSoft.PageComponents --source LocalFeed
 
         <BaseCard Variant="CardVariant.Contact">
             <HeaderContent>
-                <Titel Level="3">Kontakt</Titel>
+                <Titel Level="3">
+                    <Emoji EmojiChar="@Emojis.Contact" Level="1" /> Kontakt
+                </Titel>
             </HeaderContent>
             <ChildContent>
-                <TextContent>
+                <TextContent Alignment="TextAlignment.Center">
                     Schreib uns auf 
-                    <TelegramLink Username="support" DisplayName="Telegram" />
+                    <TelegramLink Username="support">
+                        <Emoji EmojiChar="@Emojis.Chat" Level="1" /> Telegram
+                    </TelegramLink>
                 </TextContent>
             </ChildContent>
         </BaseCard>
@@ -704,10 +816,24 @@ Dieses Projekt ist unter der **MIT-Lizenz** lizenziert - siehe [LICENSE.txt](LIC
 - [ ] Form-Komponenten
 - [ ] Weitere Grid-Layout-Optionen
 - [ ] Animation-Utilities
+- [ ] Table-Komponenten
+- [ ] Badge-Komponenten
+- [ ] Progress-Bar-Komponenten
 
 ---
 
-**Version:** 1.1.11
+## 📝 Changelog
+
+### Version 1.1.11
+- Vollständige .NET 10.0 Unterstützung
+- Über 200 vordefinierte Emoji-Konstanten
+- Erweiterte TextContent-Komponente mit Spacing-Kontrolle
+- Emoji-Komponente mit Shadow-Support
+- Verbesserte Dokumentation
+
+---
+
+**Version:** 1.1.11  
 **Target Framework:** .NET 10.0  
 **Package ID:** DragonSoft.PageComponents  
 **Repository:** [GitHub](https://github.com/DIMnM/DragonSoft.PageComponents)
