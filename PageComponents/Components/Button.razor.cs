@@ -52,11 +52,16 @@ public partial class Button
     [Parameter]
     public bool Disabled { get; set; }
 
+    [Parameter]
+    public int BorderRadius { get; set; } = 8;
+
     /// <summary>
     /// Click-Event
     /// </summary>
     [Parameter]
     public EventCallback OnClick { get; set; }
+
+    private string BorderRadiusStyle => $"border-radius: {BorderRadius}px;";
 }
 
 public enum ButtonVariant

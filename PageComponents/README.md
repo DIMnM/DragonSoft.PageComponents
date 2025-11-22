@@ -831,9 +831,13 @@ Dieses Projekt ist unter der **MIT-Lizenz** lizenziert - siehe [LICENSE.txt](LIC
 - Emoji-Komponente mit Shadow-Support
 - Verbesserte Dokumentation
 
+### Version 1.1.12.1
+- Dynamische Anpassung für den BorderRadius der BaseCard-Komponente und des Buttons
+
+
 ---
 
-**Version:** 1.1.11  
+**Version:** 1.1.12.1
 **Target Framework:** .NET 10.0  
 **Package ID:** DragonSoft.PageComponents  
 **Repository:** [GitHub](https://github.com/DIMnM/DragonSoft.PageComponents)

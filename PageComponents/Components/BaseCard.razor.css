@@ -1,6 +1,6 @@
 ﻿.base-card {
     background: var(--bg-secondary);
-    border-radius: 10px;
+    /* border-radius wird jetzt dynamisch über den BorderRadius-Parameter gesetzt */
     padding: 2rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -192,7 +192,6 @@ div.card-header.header-space-between {
 .card-note {
     background: var(--primary-transparent-low);
     padding: 1rem;
-    border-radius: 8px;
     border-left: 4px solid var(--primary-color);
     font-style: italic;
     margin-top: 1.5rem;
@@ -216,7 +215,6 @@ div.card-header.header-space-between {
 
 .card-sub {
     background: var(--bg-tertiary);
-    border-radius: 10px;
     padding: 16px;
     box-shadow: 0 3px 10px var(--medium-gray);
     margin-top: 2rem;
@@ -232,7 +230,6 @@ div.card-header.header-space-between {
     padding: 3rem 2rem 1rem 2rem;
     background: linear-gradient(16deg, var(--bg-secondary) 45%, var(--primary-color) 100%);
     color: var(--text-primary);
-    border-radius: 15px;
 }
 
     .card-cta:hover {
@@ -243,7 +240,6 @@ div.card-header.header-space-between {
     background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--primary-color) 100%);
     color: var(--text-white);
     padding: 3rem 2rem;
-    border-radius: 15px;
     text-align: center;
 }
 
@@ -257,7 +253,6 @@ div.card-header.header-space-between {
     background: var(--bg-secondary);
     color: var(--text-primary);
     border: 2px solid var(--border-secondary);
-    border-radius: 15px;
     transition: border-color 0.3s ease;
 }
 
@@ -269,7 +264,6 @@ div.card-header.header-space-between {
 .card-legal {
     background: var(--bg-secondary);
     border: 2px solid var(--border-primary);
-    border-radius: 10px;
     padding: 2rem;
     position: relative;
     padding-left: 5rem;
@@ -284,7 +278,6 @@ div.card-header.header-space-between {
 .card-rules {
     background: var(--bg-secondary);
     border-left: 5px solid var(--border-primary);
-    border-radius: 10px;
     padding: .5rem;
     position: relative;
     padding: 2.1rem 1.8rem 2.1rem 3.2rem;
@@ -310,7 +303,6 @@ div.card-header.header-space-between {
 .card-info {
     background: var(--primary-transparent-low);
     padding: 1rem;
-    border-radius: 8px;
     border-left: 4px solid var(--primary-color);
     font-style: italic;
     margin-top: 1.5rem;

@@ -7,7 +7,7 @@
 
 		<!-- NuGet Package Informationen -->
 		<PackageId>DragonSoft.PageComponents</PackageId>
-		<Version>1.1.11</Version>
+		<Version>1.1.12.1</Version>
 		<Authors>Kenthanar</Authors>
 		<Company>DragonSoft</Company>
 		<Description>Wiederverwendbare UI-Komponenten für Blazor/Razor mit .NET 10.0</Description>
@@ -48,6 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="wwwroot\css\" />
 	  <Folder Include="wwwroot\js\" />
 	</ItemGroup>
 
