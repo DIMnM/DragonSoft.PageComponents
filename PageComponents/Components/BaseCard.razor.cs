@@ -1,38 +1,26 @@
-namespace PageComponents.Components;
-
 using Microsoft.AspNetCore.Components;
+
+namespace PageComponents.Components;
 
 public partial class BaseCard
 {
     /// <summary>
-    /// Hauptinhalt der Card
+    /// Hauptinhalt der Karte
     /// </summary>
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
     /// <summary>
-    /// Header-Inhalt der Card
+    /// Header-Inhalt (optional)
     /// </summary>
     [Parameter]
     public RenderFragment? HeaderContent { get; set; }
 
     /// <summary>
-    /// Footer-Inhalt der Card
+    /// Footer-Inhalt (optional)
     /// </summary>
     [Parameter]
     public RenderFragment? FooterContent { get; set; }
-
-    /// <summary>
-    /// Variante der Card (Standard, Hervorgehoben, Warnung)
-    /// </summary>
-    [Parameter]
-    public CardVariant Variant { get; set; } = CardVariant.Default;
-
-    /// <summary>
-    /// Zusätzliche CSS-Klassen
-    /// </summary>
-    [Parameter]
-    public string? CssClass { get; set; }
 
     /// <summary>
     /// Header anzeigen
@@ -47,165 +35,145 @@ public partial class BaseCard
     public bool ShowFooter { get; set; } = true;
 
     /// <summary>
-    /// Layout des Headers (wie Elemente verteilt werden)
+    /// Karten-Variante
     /// </summary>
     [Parameter]
-    public CardHeaderLayout HeaderLayout { get; set; } = CardHeaderLayout.Default;
+    public CardVariant Variant { get; set; } = CardVariant.Default;
 
     /// <summary>
-    /// Layout des Footers (wie Elemente verteilt werden)
+    /// Zusätzliche CSS-Klassen
     /// </summary>
     [Parameter]
-    public CardFooterLayout FooterLayout { get; set; } = CardFooterLayout.Default;
+    public string CssClass { get; set; } = "";
 
     /// <summary>
-    /// Vertikale Ausrichtung der Header-Elemente
+    /// Header-Layout
     /// </summary>
     [Parameter]
-    public VerticalAlign HeaderAlign { get; set; } = VerticalAlign.Center;
+    public HeaderLayout HeaderLayout { get; set; } = HeaderLayout.Default;
 
     /// <summary>
-    /// Vertikale Ausrichtung der Footer-Elemente
+    /// Footer-Layout
     /// </summary>
     [Parameter]
-    public VerticalAlign FooterAlign { get; set; } = VerticalAlign.Center;
+    public FooterLayout FooterLayout { get; set; } = FooterLayout.Default;
 
-    private string HeaderLayoutClass
-    {
-        get
-        {
-            var classes = new List<string>();
+    /// <summary>
+    /// Border-Radius in Pixeln (Standard: 10)
+    /// </summary>
+    [Parameter]
+    public int BorderRadius { get; set; } = 10;
 
-            // Layout-Klasse
-            classes.Add(HeaderLayout switch
-            {
-                CardHeaderLayout.SpaceBetween => "header-space-between",
-                CardHeaderLayout.SpaceAround => "header-space-around",
-                CardHeaderLayout.SpaceEvenly => "header-space-evenly",
-                CardHeaderLayout.Center => "header-center",
-                CardHeaderLayout.End => "header-end",
-                CardHeaderLayout.Start => "header-start",
-                _ => ""
-            });
-
-            // Vertikale Ausrichtung
-            classes.Add(HeaderAlign switch
-            {
-                VerticalAlign.Start => "align-start",
-                VerticalAlign.Center => "align-center",
-                VerticalAlign.End => "align-end",
-                VerticalAlign.Stretch => "align-stretch",
-                _ => "align-center"
-            });
-
-            return string.Join(" ", classes.Where(c => !string.IsNullOrEmpty(c)));
-        }
-    }
-
-    private string FooterLayoutClass
-    {
-        get
-        {
-            var classes = new List<string>();
-
-            // Layout-Klasse
-            classes.Add(FooterLayout switch
-            {
-                CardFooterLayout.SpaceBetween => "footer-space-between",
-                CardFooterLayout.SpaceAround => "footer-space-around",
-                CardFooterLayout.SpaceEvenly => "footer-space-evenly",
-                CardFooterLayout.Center => "footer-center",
-                CardFooterLayout.End => "footer-end",
-                CardFooterLayout.Start => "footer-start",
-                _ => ""
-            });
-
-            // Vertikale Ausrichtung
-            classes.Add(FooterAlign switch
-            {
-                VerticalAlign.Start => "align-start",
-                VerticalAlign.Center => "align-center",
-                VerticalAlign.End => "align-end",
-                VerticalAlign.Stretch => "align-stretch",
-                _ => "align-center"
-            });
-
-            return string.Join(" ", classes.Where(c => !string.IsNullOrEmpty(c)));
-        }
-    }
+    /// <summary>
+    /// Gibt die CSS-Klasse für die Karten-Variante zurück
+    /// </summary>
     private string VariantClass => Variant switch
     {
-        CardVariant.Consequences => "card-consequences",
-        CardVariant.Contact => "card-contact",
-        CardVariant.CTA => "card-cta",
-        CardVariant.Detail => "card-detail",
-        CardVariant.Event => "card-event",
         CardVariant.Highlighted => "card-highlighted",
-        CardVariant.Hero => "card-hero",
-        CardVariant.Info => "card-info",
-        CardVariant.Join => "card-join",
-        CardVariant.Legal => "card-legal",
-        CardVariant.News => "card-news",
-        CardVariant.NewsSubCard => "card-news-sub",
-        CardVariant.Note => "card-note",
-        CardVariant.Rules => "card-rules",
-        CardVariant.RulesSubCard => "card-rules-sub",
-        CardVariant.SubCard => "card-sub",
         CardVariant.Warning => "card-warning",
-        CardVariant.WarningSubCard => "card-warning-sub",
-        _ => "card-default"
+        CardVariant.WarningSub => "card-warning-sub",
+        CardVariant.Event => "card-event",
+        CardVariant.News => "card-news",
+        CardVariant.NewsSub => "card-news-sub",
+        CardVariant.Note => "card-note",
+        CardVariant.Detail => "card-detail",
+        CardVariant.Consequences => "card-consequences",
+        CardVariant.Sub => "card-sub",
+        CardVariant.Hero => "card-hero",
+        CardVariant.Cta => "card-cta",
+        CardVariant.Join => "card-join",
+        CardVariant.Contact => "card-contact",
+        CardVariant.Legal => "card-legal",
+        CardVariant.Rules => "card-rules",
+        CardVariant.RulesSub => "card-rules-sub",
+        CardVariant.Info => "card-info",
+        _ => ""
     };
+
+    /// <summary>
+    /// Gibt die CSS-Klasse für das Header-Layout zurück
+    /// </summary>
+    private string HeaderLayoutClass => HeaderLayout switch
+    {
+        HeaderLayout.SpaceBetween => "header-space-between",
+        HeaderLayout.SpaceAround => "header-space-around",
+        HeaderLayout.SpaceEvenly => "header-space-evenly",
+        HeaderLayout.Center => "header-center",
+        HeaderLayout.Start => "header-start",
+        HeaderLayout.End => "header-end",
+        _ => ""
+    };
+
+    /// <summary>
+    /// Gibt die CSS-Klasse für das Footer-Layout zurück
+    /// </summary>
+    private string FooterLayoutClass => FooterLayout switch
+    {
+        FooterLayout.SpaceBetween => "footer-space-between",
+        FooterLayout.SpaceAround => "footer-space-around",
+        FooterLayout.SpaceEvenly => "footer-space-evenly",
+        FooterLayout.Center => "footer-center",
+        FooterLayout.Start => "footer-start",
+        FooterLayout.End => "footer-end",
+        _ => ""
+    };
+
+    /// <summary>
+    /// Gibt den inline-style für den border-radius zurück
+    /// </summary>
+    private string BorderRadiusStyle => $"border-radius: {BorderRadius}px;";
 }
 
+/// <summary>
+/// Verfügbare Karten-Varianten
+/// </summary>
 public enum CardVariant
 {
-    Consequences,
-    Contact,
-    CTA,
     Default,
-    Detail,
-    Event,
     Highlighted,
-    Hero,
-    Info,
-    Join,
-    Legal,
-    NewsSubCard,
-    News,
-    Note,
-    Rules,
-    RulesSubCard,
-    SubCard,
     Warning,
-    WarningSubCard
+    WarningSub,
+    Event,
+    News,
+    NewsSub,
+    Note,
+    Detail,
+    Consequences,
+    Sub,
+    Hero,
+    Cta,
+    Join,
+    Contact,
+    Legal,
+    Rules,
+    RulesSub,
+    Info
 }
 
-public enum CardHeaderLayout
+/// <summary>
+/// Header-Layout-Optionen
+/// </summary>
+public enum HeaderLayout
 {
-    Default,        // Normaler Block-Flow
-    SpaceBetween,   // Elemente an den Rändern, Platz dazwischen
-    SpaceAround,    // Gleicher Abstand um jedes Element
-    SpaceEvenly,    // Perfekt gleichmäßig verteilt
-    Center,         // Alle Elemente zentriert
-    Start,          // Alle Elemente links
-    End             // Alle Elemente rechts
+    Default,
+    SpaceBetween,
+    SpaceAround,
+    SpaceEvenly,
+    Center,
+    Start,
+    End
 }
 
-public enum CardFooterLayout
+/// <summary>
+/// Footer-Layout-Optionen
+/// </summary>
+public enum FooterLayout
 {
-    Default,        // Normaler Block-Flow
-    SpaceBetween,   // Elemente an den Rändern, Platz dazwischen
-    SpaceAround,    // Gleicher Abstand um jedes Element
-    SpaceEvenly,    // Perfekt gleichmäßig verteilt
-    Center,         // Alle Elemente zentriert
-    Start,          // Alle Elemente links
-    End             // Alle Elemente rechts
-}
-
-public enum VerticalAlign
-{
-    Start,      // Oben ausrichten
-    Center,     // Mittig ausrichten (Standard)
-    End,        // Unten ausrichten
-    Stretch     // Über gesamte Höhe strecken
+    Default,
+    SpaceBetween,
+    SpaceAround,
+    SpaceEvenly,
+    Center,
+    Start,
+    End
 }

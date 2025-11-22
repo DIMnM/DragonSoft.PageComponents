@@ -824,7 +824,7 @@ Dieses Projekt ist unter der **MIT-Lizenz** lizenziert - siehe [LICENSE.txt](LIC
 
 ## 📝 Changelog
 
-### Version 1.1.11
+### Version 1.1.12
 - Vollständige .NET 10.0 Unterstützung
 - Über 200 vordefinierte Emoji-Konstanten
 - Erweiterte TextContent-Komponente mit Spacing-Kontrolle
@@ -833,7 +833,7 @@ Dieses Projekt ist unter der **MIT-Lizenz** lizenziert - siehe [LICENSE.txt](LIC
 
 ---
 
-**Version:** 1.1.11  
+**Version:** 1.1.12  
 **Target Framework:** .NET 10.0  
 **Package ID:** DragonSoft.PageComponents  
 **Repository:** [GitHub](https://github.com/DIMnM/DragonSoft.PageComponents)

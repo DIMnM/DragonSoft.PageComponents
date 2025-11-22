@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="PageComponents/PageComponents.csproj" />
+  <Project Path="testProject/testProject.csproj" Id="4a8749a4-2643-43ba-ac98-7a455c50bf82" />
 </Solution>
