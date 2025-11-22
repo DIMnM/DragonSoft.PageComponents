@@ -26,3 +26,43 @@ Welcome to your new app.
     </FooterContent>
 </BaseCard>
 </BaseSection>
+
+<BaseSection>
+    <BaseCard Variant="CardVariant.Event"
+              FooterLayout="FooterLayout.SpaceEvenly"
+              FooterAlign="VerticalAlign.Start">
+        <HeaderContent>
+            <Titel Level="2"><Emoji EmojiChar="@Emojis.Chat" /> Bleib auf dem Laufenden</Titel>
+        </HeaderContent>
+        <ChildContent>
+            <TextContent>Verpasse keine Ankündigungen, keine Events und keine flauschigen Momente!</TextContent>
+        </ChildContent>
+        <FooterContent>
+            <div>
+                <TextContent Variant="TextVariant.Bold"><Emoji EmojiChar="@Emojis.Handy2" /> Telegram:</TextContent>
+                <ul>
+                    <li>
+                        <TelegramLink Username="ElbeFurs_Info" DisplayName="Infokanal" />
+                    </li>
+                    <li>
+                        <TelegramLink Username="ElbeFurs_Gruppe" DisplayName="Gruppe" />
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <TextContent Variant="TextVariant.Bold"><Emoji EmojiChar="@Emojis.Handy2" /> Kontakt:</TextContent>
+                <ul>
+                    <li>
+                        <TelegramLink Username="Menevoreth" />
+                    </li>
+                    <li>
+                        <TelegramLink Username="AugustinCRTP" DisplayName="August" />
+                    </li>
+                    <li>
+                        <TelegramLink Username="Kenthanar" />
+                    </li>
+                </ul>
+            </div>
+        </FooterContent>
+    </BaseCard>
+</BaseSection>

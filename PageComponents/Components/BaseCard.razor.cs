@@ -65,6 +65,18 @@ public partial class BaseCard
     public int BorderRadius { get; set; } = 10;
 
     /// <summary>
+    /// Vertikale Ausrichtung der Header-Elemente
+    /// </summary>
+    [Parameter]
+    public VerticalAlign HeaderAlign { get; set; } = VerticalAlign.Center;
+
+    /// <summary>
+    /// Vertikale Ausrichtung der Footer-Elemente
+    /// </summary>
+    [Parameter]
+    public VerticalAlign FooterAlign { get; set; } = VerticalAlign.Center;
+
+    /// <summary>
     /// Gibt die CSS-Klasse für die Karten-Variante zurück
     /// </summary>
     private string VariantClass => Variant switch
@@ -176,4 +188,12 @@ public enum FooterLayout
     Center,
     Start,
     End
+}
+
+public enum VerticalAlign
+{
+    Start,      // Oben ausrichten
+    Center,     // Mittig ausrichten (Standard)
+    End,        // Unten ausrichten
+    Stretch     // Über gesamte Höhe strecken
 }
