@@ -1,0 +1,225 @@
+/* ========================================
+   LIGHT THEME (Standard)
+   ======================================== */
+
+:root {
+    /* Logo-basierte Hauptfarben */
+    --primary-color: hsl(199, 100%, 84%);
+    --secondary-color: hsl(15, 69%, 53%);
+    --tertiary-color: hsl(119, 54%, 65%);
+    /* Hintergrundfarben - Light Theme */
+    --bg-primary: hsl(0, 0%, 88%);
+    --bg-secondary: hsl(0, 0%, 93%);
+    --bg-tertiary: hsl(0,0%, 98%);
+    /* Abgrenzungsfarben -Dark Theme */
+    --border-primary: hsl(0, 0%, 75%);
+    --border-secondary: hsl(0, 0%, 50%);
+    --border-tertiary: hsl(0, 0%, 25%);
+    /* Textfarben - Light Theme */
+    --text-primary: hsl(0, 0%, 10%);
+    --text-secondary: hsl(0, 0%, 25%);
+    --text-tertiary: hsl(0, 0%, 40%);
+    /* Neutrale Farben - Light Theme */
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 75%);
+    --medium-gray: hsl(0, 0%, 50%);
+    --dark-gray: hsl(0, 0%, 25%);
+    --black: hsl(0, 0%, 0%);
+    /* Transparente Varianten */
+    --primary-transparent: hsla(199, 100%, 84%, 0.75);
+    --primary-transparent-low: hsla(199, 100%, 84%, 0.2);
+    --secondary-transparent: hsla(15, 87%, 53%, 0.75);
+    --tertiary-transparent: hsla(119, 54%, 65%, 0.4);
+    /* Schatten und Glows */
+    --shadow-primary: hsla(0, 0%, 0%, 0.8);
+    --shadow-secondary: hsla(0, 0%, 0%, 0.5);
+    --shadow-tertiary: hsla(0, 0%, 0%, 0.2);
+    /* Status-Farben */
+    --error-color: hsl(0, 100%, 60%);
+    --valid-color: hsl(141, 100%, 60%);
+    --warning-color: hsl(54, 100%, 60%);
+    --warning-color-hover: hsl(45, 100%, 66%);
+    --info-color: hsl(207, 100%, 60%);
+    --success-color: hsl(134, 61%, 61%);
+    --success-color-hover: hsl(133, 61%, 66%);
+    --danger-color: hsl(354, 71%, 53%);
+    --danger-color-hover: hsl(354 68% 57%);
+}
+
+/* ========================================
+   DARK THEME - Automatisch basierend auf System-Präferenz
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Logo-basierte Hauptfarben bleiben gleich */
+        --primary-color: hsl(199, 100%, 21%);
+        --secondary-color: hsl(15, 69%, 55%);
+        --tertiary-color: hsl(119, 54%, 30%);
+        /* Hintergrundfarben - Dark Theme */
+        --bg-primary: hsl(0, 0%, 2%);
+        --bg-secondary: hsl(0, 0%, 7%);
+        --bg-tertiary: hsl(0, 0%, 12%);
+        /* Abgrenzungsfarben -Dark Theme */
+        --border-primary: hsl(0, 0%, 25%);
+        --border-secondary: hsl(0, 0%, 50%);
+        --border-tertiary: hsl(0, 0%, 75%);
+        /* Textfarben - Dark Theme */
+        --text-primary: hsl(0, 0%, 90%);
+        --text-secondary: hsl(0, 0%, 75%);
+        --text-tertiary: hsl(0, 0%, 60%);
+        /* Neutrale Farben - Dark Theme */
+        --white: hsl(0, 0%, 100%);
+        --light-gray: hsl(0, 0%, 75%);
+        --medium-gray: hsl(0, 0%, 50%);
+        --dark-gray: hsl(0, 0%, 25%);
+        --black: hsl(0, 0%, 0%);
+        /* Transparente Varianten - Dark Theme */
+        --primary-transparent: hsla(199, 100%, 21%, 0.75);
+        --secondary-transparent: hsla(15, 69%, 55%, 0.75);
+        --tertiary-transparent: hsla(119, 54%, 30%, 0.75);
+        /* Schatten und Glows - Dark Theme */
+        --shadow-primary: hsla(0, 0%, 100%, 0.8);
+        --shadow-secondary: hsla(0, 0%, 100%, 0.5);
+        --shadow-tertiary: hsla(0, 0%, 100%, 0.2);
+        /* Status-Farben bleiben gleich */
+        --error-color: hsl(0, 100%, 40%);
+        --valid-color: hsl(141, 100%, 40%);
+        --warning-color: hsl(54, 100%, 40%);
+        --warning-color-hover: hsl(45, 100%, 44%);
+        --info-color: hsl(207, 100%, 40%);
+        --success-color: hsl(134, 61%, 41%);
+        --success-color-hover: hsl(133, 61%, 33%);
+        --danger-color: hsl(354, 71%, 47%);
+        --danger-color-hover: hsl(354 68% 43%);
+    }
+}
+
+/* ========================================
+   Basis-Styling
+   ======================================== */
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a, .btn-link {
+    color: var(--link-color);
+    transition: color 0.2s ease;
+}
+
+    a:hover, .btn-link:hover {
+        color: var(--link-hover);
+    }
+
+.btn-primary {
+    color: var(--text-on-primary);
+    background-color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-border);
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: var(--btn-primary-hover);
+    }
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem var(--white), 0 0 0 0.25rem var(--btn-focus);
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+h1:focus {
+    outline: none;
+}
+
+strong {
+    color: var(--text-primary);
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+/* ========================================
+   Validierung
+   ======================================== */
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid var(--valid-color);
+}
+
+.invalid {
+    outline: 1px solid var(--error-color);
+}
+
+.validation-message {
+    color: var(--error-color);
+}
+
+/* ========================================
+   Error Boundary
+   ======================================== */
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, hsl(0, 76%, 42%);
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: var(--white);
+}
+
+    .blazor-error-boundary::after {
+        content: "An error has occurred."
+    }
+
+/* ========================================
+   Form Styling
+   ======================================== */
+
+.darker-border-checkbox.form-check-input {
+    border-color: var(--medium-gray);
+}
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--text-secondary);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+.form-control {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+/* ========================================
+   Theme Toggle Helper (Optional)
+   ======================================== */
+
+.theme-toggle {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+    .theme-toggle:hover {
+        background-color: var(--primary-light);
+        transform: scale(1.05);
+    }

@@ -1,7 +1,7 @@
 ﻿<div class="base-card @VariantClass @CssClass" style="@BorderRadiusStyle">
     @if (ShowHeader && HeaderContent != null)
     {
-        <div class="card-header @HeaderLayoutClass">
+        <div class="card-header @HeaderLayoutClass @HeaderAlignClass">
             @HeaderContent
         </div>
     }
@@ -12,7 +12,7 @@
 
     @if (ShowFooter && FooterContent != null)
     {
-        <div class="card-footer @FooterLayoutClass">
+        <div class="card-footer @FooterLayoutClass @FooterAlignClass">
             @FooterContent
         </div>
     }

@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
+		<TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- NuGet Package Informationen -->
 		<PackageId>DragonSoft.PageComponents</PackageId>
-		<Version>1.1.12.1</Version>
+		<Version>1.2.0.1</Version>
 		<Authors>Kenthanar</Authors>
 		<Company>DragonSoft</Company>
-		<Description>Wiederverwendbare UI-Komponenten für Blazor/Razor mit .NET 10.0</Description>
-		<PackageTags>blazor;razor;components;ui;net10</PackageTags>
+		<Description>Wiederverwendbare UI-Komponenten für Blazor/Razor mit .NET 8.0, 9.0 und 10.0</Description>
+		<PackageTags>blazor;razor;components;ui;net8;net9;net10</PackageTags>
 		<RepositoryUrl>https://github.com/DIMnM/DragonSoft.PageComponents</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/DIMnM/DragonSoft.PageComponents</PackageProjectUrl>
@@ -24,7 +24,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 
 		<!-- Release Notes -->
-		<PackageReleaseNotes>Initiales Release für .NET 10.0</PackageReleaseNotes>
+		<PackageReleaseNotes>Multi-Targeting Support für .NET 8.0, 9.0 und 10.0</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<!-- README zur Package hinzufügen -->
@@ -43,7 +43,16 @@
 		<SupportedPlatform Include="browser" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<!-- Versionsspezifische Package-Referenzen -->
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0" />
 	</ItemGroup>
 

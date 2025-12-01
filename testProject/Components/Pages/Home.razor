@@ -28,41 +28,156 @@ Welcome to your new app.
 </BaseSection>
 
 <BaseSection>
-    <BaseCard Variant="CardVariant.Event"
-              FooterLayout="FooterLayout.SpaceEvenly"
-              FooterAlign="VerticalAlign.Start">
-        <HeaderContent>
-            <Titel Level="2"><Emoji EmojiChar="@Emojis.Chat" /> Bleib auf dem Laufenden</Titel>
-        </HeaderContent>
-        <ChildContent>
-            <TextContent>Verpasse keine Ankündigungen, keine Events und keine flauschigen Momente!</TextContent>
-        </ChildContent>
-        <FooterContent>
-            <div>
-                <TextContent Variant="TextVariant.Bold"><Emoji EmojiChar="@Emojis.Handy2" /> Telegram:</TextContent>
-                <ul>
-                    <li>
-                        <TelegramLink Username="ElbeFurs_Info" DisplayName="Infokanal" />
-                    </li>
-                    <li>
-                        <TelegramLink Username="ElbeFurs_Gruppe" DisplayName="Gruppe" />
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <TextContent Variant="TextVariant.Bold"><Emoji EmojiChar="@Emojis.Handy2" /> Kontakt:</TextContent>
-                <ul>
-                    <li>
-                        <TelegramLink Username="Menevoreth" />
-                    </li>
-                    <li>
-                        <TelegramLink Username="AugustinCRTP" DisplayName="August" />
-                    </li>
-                    <li>
-                        <TelegramLink Username="Kenthanar" />
-                    </li>
-                </ul>
-            </div>
-        </FooterContent>
-    </BaseCard>
+    <BaseGrid Preset="GridPreset.Medium">
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.Sparkles" Level="3" />
+                <Titel Level="3"> Vielfältige Events</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Von entspannten Parkwalks über spektakuläre Messebesuche bis hin zu unserem legendären ElbeFurDance
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.Handshake" Style="font-size: 3rem;" />
+                <Titel Level="3">Starke Gemeinschaft</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Bei uns ist jeder willkommen, egal ob erfahrener Fursuiter oder neugieriger Neuling
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.GreenHeart" Style="font-size: 3rem;" />
+                <Titel Level="3" Align="TextAlign.Center">Soziales Engagement</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Wir setzen uns für wohltätige Zwecke ein und unterstützen lokale Projekte
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.Rainbow" Style="font-size: 3rem;" />
+                <Titel Level="3">Toleranz & Vielfalt</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Wir stehen für eine offene, bunte Community und setzen klare Zeichen gegen Diskriminierung
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+    </BaseGrid>
+</BaseSection>
+
+<BaseSection>
+    <Titel Level="2"><Emoji EmojiChar="@Emojis.Calendar" /> Kommende Events – Sei dabei!</Titel>
+    <BaseGrid Preset="GridPreset.Single">
+        <!-- Event Card 4 -->
+        <BaseCard Variant="CardVariant.Event" HeaderLayout="HeaderLayout.SpaceBetween" HeaderAlign="VerticalAlign.Center">
+            <HeaderContent>
+                <Titel Level="3">
+                    <Emoji Style="font-size: 2.5rem;" EmojiChar="@Emojis.FilmClap" />
+                    Zoomania 2 Kino-Event
+                </Titel>
+                <EventDate>29. November 2025</EventDate>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Gemeinsamer Kinobesuch im Cinestar am Pfahlberg Magdeburg – Fursuits sind herzlich willkommen!
+                    Freut euch auf einen flauschigen Filmnachmittag mit der Community.
+                </TextContent>
+                <BaseCard Variant="CardVariant.Sub">
+                    <p>
+                        <Emoji EmojiChar="@Emojis.Pin" /> <strong>Ort:</strong> Cinestar Pfahlberg, Magdeburg
+                    </p>
+                    <p>
+                        <Emoji EmojiChar="@Emojis.FilmClap" /> <strong>Film:</strong> Zoomania 2
+                    </p>
+                    <p>
+                        <Emoji EmojiChar="@Emojis.Clock4" /> <strong>Zeit:</strong> Treffen ca. 16:00 Uhr auf dem Parkplatz
+                    </p>
+                </BaseCard>
+            </ChildContent>
+            <FooterContent>
+                <Button Variant="ButtonVariant.Primary" Href="https://uifkc70z.forms.app/untitled-form-1">
+                    Hier Anmelden →
+                </Button>
+            </FooterContent>
+        </BaseCard>
+
+        <!-- Event Card 5 -->
+        <BaseCard Variant="CardVariant.Event" HeaderLayout="HeaderLayout.SpaceBetween" HeaderAlign="VerticalAlign.Center">
+            <HeaderContent>
+                <Titel Level="3">
+                    <Emoji EmojiChar="@Emojis.PineTree" Style="font-size: 2.5rem" />
+                    Weihnachts-Walk & Stammtisch
+                </Titel>
+                <EventDate>13. Dezember 2025</EventDate>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Gemeinsam gleiten wir über’s Eis, schlendern durch funkelnde Gassen und lassen den Abend warm und
+                    gemütlich ausklingen – ein vorweihnachtliches Erlebnis für alle Furs & Friends.
+                </TextContent>
+                <BaseCard Variant="CardVariant.Sub">
+                    <p>
+                        <Emoji EmojiChar="@Emojis.Pin" /> <strong>Ort:</strong> Magdeburg
+                    </p>
+                    <p>
+                        <Emoji EmojiChar="@Emojis.SantaClaus" /> <strong>Special:</strong> Winterliche Atmosphäre garantiert!
+                    </p>
+                    <p>
+                        <Emoji EmojiChar="@Emojis.Clock3" /> <strong>Zeit:</strong> Treffen um 14:30 Uhr am Alle-Center (Brunnen)
+                    </p>
+                    <p>
+                        <Emoji EmojiChar="@Emojis.HotBeverage" /> <strong>Stammtisch:</strong> 17:30 Uhr in der Kimbo-Burg
+                    </p>
+                </BaseCard>
+            </ChildContent>
+            <FooterContent>
+                <Button Variant="ButtonVariant.Primary" Href="https://uifkc70z.forms.app/my-new-form">
+                    Hier Anmelden →
+                </Button>
+            </FooterContent>
+        </BaseCard>
+
+        <BaseCard Variant="CardVariant.Event" HeaderLayout="HeaderLayout.SpaceBetween" HeaderAlign="VerticalAlign.Center">
+            <HeaderContent>
+                <Titel Level="2">
+                    <Emoji Style="font-size: 2.5rem;" EmojiChar="@Emojis.PineTree" />
+                    Bäume pflanzen für den guten Zweck
+                </Titel>
+                    <EventDate>7. März 2026</EventDate>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Die 365€, die wir beim ElbeFurDance 4 für das Waldfuchs-Projekt gesammelt haben, werden in Baumsetzlinge umgewandelt.
+                    Gemeinsam pflanzen wir sie Ende November in Wernigerode. Sei dabei und setze ein grünes Zeichen!
+                </TextContent>
+                <BaseCard Variant="CardVariant.Sub">
+                    <p>
+                        <Emoji EmojiChar="@Emojis.Pin" /> <strong>Ort:</strong> Wernigerode
+                    </p>
+                    <p>
+                        <Emoji EmojiChar="@Emojis.Tree" /> <strong>Partner:</strong> Schutzgemeinschaft deutscher Wald
+                    </p>
+                    <p>
+                        <Emoji EmojiChar="@Emojis.Clock9" /> <strong>Zeit:</strong> Treffen um 9:30 Uhr am Parkplatz
+                    </p>
+                </BaseCard>
+            </ChildContent>
+            <FooterContent>
+                <Button Href="#" Variant="ButtonVariant.Secondary">
+                    Infos Folgen →
+                </Button>
+            </FooterContent>
+        </BaseCard>
+    </BaseGrid>
 </BaseSection>

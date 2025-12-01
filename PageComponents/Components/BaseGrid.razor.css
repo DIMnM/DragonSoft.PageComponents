@@ -45,7 +45,7 @@
     .grid-medium,
     .grid-small,
     .grid-compact,
-    grid-single {
+    .grid-single {
         grid-template-columns: 1fr;
     }
 }

@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DragonSoft.PageComponents" Version="1.1.11" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PageComponents\PageComponents.csproj" />
   </ItemGroup>
 

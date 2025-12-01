@@ -100,7 +100,6 @@ public struct Emojis
         Diamond = "💠",
         Dice = "🎲",
         Dino = "🦖",
-        discet = "🪀",
         DiscoBall = "🪩",
         Dog = "🐶",
         Donate = "🎁",
@@ -329,5 +328,6 @@ public struct Emojis
         Wrench = "🔧",
         YellowHeart = "💛",
         YellowSquare = "🟨",
+        Yoyo = "🪀",
         Zebra = "🦓";
 }
