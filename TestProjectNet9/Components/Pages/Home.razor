@@ -1,0 +1,75 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<BaseSection>
+<BaseCard>
+    <HeaderContent>
+        <Titel Level="2">
+            Test 1234
+        </Titel>
+    </HeaderContent>
+    <ChildContent>
+    <TextContent>
+        Dies ist ein Test
+    </TextContent>
+    </ChildContent>
+    <FooterContent>
+        <Button BorderRadius="5" Variant="ButtonVariant.Success">
+                Klicken Sie mich
+        </Button>
+    </FooterContent>
+</BaseCard>
+</BaseSection>
+
+<BaseSection>
+    <BaseGrid Preset="GridPreset.Medium">
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.Sparkles" Style="font-size: 3rem;" />
+                <Titel Level="3"> Vielfältige Events</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Von entspannten Parkwalks über spektakuläre Messebesuche bis hin zu unserem legendären ElbeFurDance
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.Handshake" Style="font-size: 3rem;" />
+                <Titel Level="3">Starke Gemeinschaft</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Bei uns ist jeder willkommen, egal ob erfahrener Fursuiter oder neugieriger Neuling
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.GreenHeart" Style="font-size: 3rem;" />
+                <Titel Level="3" Align="TextAlign.Center">Soziales Engagement</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Wir setzen uns für wohltätige Zwecke ein und unterstützen lokale Projekte
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+        <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
+            <HeaderContent>
+                <Emoji EmojiChar="@Emojis.Rainbow" Style="font-size: 3rem;" />
+                <Titel Level="3">Toleranz & Vielfalt</Titel>
+            </HeaderContent>
+            <ChildContent>
+                <TextContent>
+                    Wir stehen für eine offene, bunte Community und setzen klare Zeichen gegen Diskriminierung
+                </TextContent>
+            </ChildContent>
+        </BaseCard>
+    </BaseGrid>
+</BaseSection>

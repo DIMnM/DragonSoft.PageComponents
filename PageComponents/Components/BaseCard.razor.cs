@@ -53,28 +53,28 @@ public partial class BaseCard
     public HeaderLayout HeaderLayout { get; set; } = HeaderLayout.Default;
 
     /// <summary>
-    /// Footer-Layout
-    /// </summary>
-    [Parameter]
-    public FooterLayout FooterLayout { get; set; } = FooterLayout.Default;
-
-    /// <summary>
-    /// Border-Radius in Pixeln (Standard: 10)
-    /// </summary>
-    [Parameter]
-    public int BorderRadius { get; set; } = 10;
-
-    /// <summary>
     /// Vertikale Ausrichtung der Header-Elemente
     /// </summary>
     [Parameter]
     public VerticalAlign HeaderAlign { get; set; } = VerticalAlign.Center;
 
     /// <summary>
+    /// Footer-Layout
+    /// </summary>
+    [Parameter]
+    public FooterLayout FooterLayout { get; set; } = FooterLayout.Default;
+
+    /// <summary>
     /// Vertikale Ausrichtung der Footer-Elemente
     /// </summary>
     [Parameter]
     public VerticalAlign FooterAlign { get; set; } = VerticalAlign.Center;
+
+    /// <summary>
+    /// Border-Radius in Pixeln (Standard: 10)
+    /// </summary>
+    [Parameter]
+    public int BorderRadius { get; set; } = 10;
 
     /// <summary>
     /// Gibt die CSS-Klasse für die Karten-Variante zurück
@@ -128,6 +128,30 @@ public partial class BaseCard
         FooterLayout.Start => "footer-start",
         FooterLayout.End => "footer-end",
         _ => ""
+    };
+
+    /// <summary>
+    /// Gibt die CSS-Klasse für die Header-Ausrichtung zurück
+    /// </summary>
+    private string HeaderAlignClass => HeaderAlign switch
+    {
+        VerticalAlign.Start => "align-start",
+        VerticalAlign.Center => "align-center",
+        VerticalAlign.End => "align-end",
+        VerticalAlign.Stretch => "align-stretch",
+        _ => "align-center"
+    };
+
+    /// <summary>
+    /// Gibt die CSS-Klasse für die Footer-Ausrichtung zurück
+    /// </summary>
+    private string FooterAlignClass => FooterAlign switch
+    {
+        VerticalAlign.Start => "align-start",
+        VerticalAlign.Center => "align-center",
+        VerticalAlign.End => "align-end",
+        VerticalAlign.Stretch => "align-stretch",
+        _ => "align-center"
     };
 
     /// <summary>

@@ -1,8 +1,9 @@
 ﻿.event-date {
     background: var(--primary-color);
     color: var(--text-primary);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
+    height: 2.7rem;
 }

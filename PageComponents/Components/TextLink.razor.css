@@ -9,6 +9,5 @@
     a:hover {
         text-decoration: none;
         text-shadow: 0 0 15px var(--secondary-transparent);
-        font-size: large;
         transform: translateY(-5px);
     }
