@@ -44,6 +44,20 @@
     --success-color-hover: hsl(133, 61%, 66%);
     --danger-color: hsl(354, 71%, 53%);
     --danger-color-hover: hsl(354 68% 57%);
+    /* Button-Variablen*/
+    --btn-primary-bg: var(--primary-color);
+    --btn-primary-border: var(--primary-color);
+    --btn-primary-hover: hsl(199, 100%, 74%);
+    --btn-secondary-color: var(--secondary-color);
+    --btn-focus: var(--primary-color);
+    
+    /* Link-Variablen */
+    --link-color: var(--secondary-color);
+    --link-hover: var(--primary-color);
+    
+    /* Text-Variablen */
+    --text-on-primary: var(--text-primary);
+    --text-white: hsl(0, 0%, 100%);
 }
 
 /* ========================================
@@ -92,6 +106,18 @@
         --success-color-hover: hsl(133, 61%, 33%);
         --danger-color: hsl(354, 71%, 47%);
         --danger-color-hover: hsl(354 68% 43%);
+        /* Button-Variablen*/
+        --btn-primary-bg: var(--primary-color);
+        --btn-primary-border: var(--primary-color);
+        --btn-primary-hover: hsl(199, 100%, 74%);
+        --btn-secondary-color: var(--secondary-color);
+        --btn-focus: var(--primary-color);
+        /* Link-Variablen */
+        --link-color: var(--secondary-color);
+        --link-hover: var(--primary-color);
+        /* Text-Variablen */
+        --text-on-primary: var(--text-primary);
+        --text-white: hsl(0, 0%, 100%);
     }
 }
 
@@ -149,6 +175,24 @@ strong {
 p {
     color: var(--text-secondary);
 }
+
+/* Textausrichtung - Zentrale Definition */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
 
 /* ========================================
    Validierung

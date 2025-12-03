@@ -1,4 +1,47 @@
-﻿.shadow {
+﻿.emoji {
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Größen-Level */
+.emoji-level-0 {
+    font-size: inherit;
+}
+
+.emoji-level-1 {
+    font-size: 1rem;
+}
+
+.emoji-level-2 {
+    font-size: 2rem;
+}
+
+.emoji-level-3 {
+    font-size: 3rem;
+}
+
+.emoji-level-4 {
+    font-size: 4rem;
+}
+
+.emoji-level-5 {
+    font-size: 5rem;
+}
+
+.emoji-level-6 {
+    font-size: 6rem;
+}
+
+/* Shadow-Effekt */
+.emoji-shadow {
     text-shadow: 0 3px 7px var(--bg-primary);
-    box-shadow: 0 0 0 transparent !important;
+}
+
+/* Responsive - Emojis auf Mobile etwas kleiner */
+@media (max-width: 768px) {
+    .emoji-level-4,
+    .emoji-level-5,
+    .emoji-level-6 {
+        font-size: 3rem;
+    }
 }

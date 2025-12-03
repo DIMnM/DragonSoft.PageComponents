@@ -26,23 +26,6 @@
     color: var(--text-primary);
 }
 
-/* Textausrichtung */
-.text-left {
-    text-align: left;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-justify {
-    text-align: justify;
-}
-
 /* Vertikale Ausrichtung (für Flex-Container) */
 .align-top {
     align-self: flex-start;

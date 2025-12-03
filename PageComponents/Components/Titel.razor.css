@@ -54,23 +54,6 @@
     padding: 0.25rem 0.75rem;
 }
 
-/* Ausrichtungen */
-.text-left {
-    text-align: left;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-justify {
-    text-align: justify;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .titel-h1 {

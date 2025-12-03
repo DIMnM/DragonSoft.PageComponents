@@ -8,11 +8,12 @@
 Welcome to your new app.
 </BaseSection>
 <BaseSection>
-<BaseCard>
+<BaseCard Variant="CardVariant.Hero">
     <HeaderContent>
         <Titel Level="2">
             Test 1234
         </Titel>
+        <Emoji EmojiChar="@Emojis.Tent" Shadow="true" Level="5"/>
     </HeaderContent>
     <ChildContent>
     <TextContent>
@@ -42,7 +43,7 @@ Welcome to your new app.
         </BaseCard>
         <BaseCard Variant="CardVariant.Detail" HeaderLayout="HeaderLayout.Center">
             <HeaderContent>
-                <Emoji EmojiChar="@Emojis.Handshake" Style="font-size: 3rem;" />
+                <Emoji EmojiChar="@Emojis.Handshake" Level="3" />
                 <Titel Level="3">Starke Gemeinschaft</Titel>
             </HeaderContent>
             <ChildContent>
@@ -74,6 +75,87 @@ Welcome to your new app.
             </ChildContent>
         </BaseCard>
     </BaseGrid>
+</BaseSection>
+
+<BaseSection>
+    <BaseCard>
+        <HeaderContent>
+            <Titel Level="2">
+                <Emoji EmojiChar="@Emojis.Handshake" /> Miteinander umgehen
+            </Titel>
+        </HeaderContent>
+        <ChildContent>
+            <BaseCard Variant="CardVariant.RulesSub">
+                <HeaderContent>
+                    <Titel Level="3">
+                        Respektvoller Umgang
+                    </Titel>
+                </HeaderContent>
+                <ChildContent>
+                    <TextContent>
+                        Behandelt einander mit Freundlichkeit und Respekt. Beleidigungen, Mobbing, Diskriminierung oder Hassrede haben bei uns keinen Platz.
+                    </TextContent>
+                    <TextContent>
+                        <strong>
+                            Nicht toleriert werden:
+                        </strong>
+                        <ul>
+                            <li>
+                                Beleidigende, herabwürdigende oder diskriminierende Äußerungen
+                            </li>
+                            <li>
+                                Rassismus, Sexismus, Homo-/Transphobie, Ableismus
+                            </li>
+                            <li>
+                                Hassrede gegen Personen, Gruppen, Religionen oder Nationen
+                            </li>
+                            <li>
+                                Persönliche Angriffe oder Bloßstellung
+                            </li>
+                            <li>
+                                Drohungen oder Androhung von Gewalt
+                            </li>
+                        </ul>
+                    </TextContent>
+                </ChildContent>
+            </BaseCard>
+            <BaseCard Variant="CardVariant.RulesSub">
+                <HeaderContent>
+                    <Titel Level="3">
+                        Konfliktlösung
+                    </Titel>
+                </HeaderContent>
+                <ChildContent>
+                    <TextContent>
+                        Private Streitigkeiten gehören nicht in die Gruppe. Klärt diese bitte unter vier Augen oder wendet euch an unser Admin-Team für Vermittlung.
+                    </TextContent>
+                </ChildContent>
+            </BaseCard>
+            <BaseCard Variant="CardVariant.RulesSub">
+                <HeaderContent>
+                    <Titel Level="3">
+                        Keine Belästigung
+                    </Titel>
+                </HeaderContent>
+                <ChildContent>
+                    <TextContent>
+                        Belästigung in jeglicher Form wird nicht toleriert. Dazu zählen:
+                        <ul>
+                            <li>
+                                Unerwünschte wiederholte Direktnachrichten
+                            </li>
+                            <li>
+                                Stalking oder Doxxing (Veröffentlichung privater Informationen)
+                            </li>
+                            <li>
+                                Sexuelle Belästigung
+                            </li>
+                        </ul>
+                    </TextContent>
+                </ChildContent>
+            </BaseCard>
+        </ChildContent>
+    </BaseCard>
 </BaseSection>
 
 <BaseSection>

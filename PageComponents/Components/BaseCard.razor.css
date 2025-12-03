@@ -164,7 +164,7 @@
 }
 
 div.card-header.header-space-between {
-    flex-direction: row
+    flex-direction: row;
 }
 
 .card-event:hover {
@@ -194,7 +194,7 @@ div.card-header.header-space-between {
     border-left: 4px solid var(--primary-color);
     font-style: italic;
     margin-top: 1.5rem;
-    color: var(--text-secondary)
+    color: var(--text-secondary);
 }
 
 
