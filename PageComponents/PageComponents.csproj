@@ -7,7 +7,7 @@
 
 		<!-- NuGet Package Informationen -->
 		<PackageId>DragonSoft.PageComponents</PackageId>
-		<Version>1.2.0.1</Version>
+		<Version>1.2.2</Version>
 		<Authors>Kenthanar</Authors>
 		<Company>DragonSoft</Company>
 		<Description>Wiederverwendbare UI-Komponenten für Blazor/Razor mit .NET 8.0, 9.0 und 10.0</Description>

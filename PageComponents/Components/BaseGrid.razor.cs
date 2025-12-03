@@ -104,6 +104,16 @@ public partial class BaseGrid
             return string.Join("; ", styles);
         }
     }
+
+    protected override void OnParametersSet()
+    {
+        if (Columns <= 0)
+            throw new ArgumentOutOfRangeException(nameof(Columns),
+                "BorderRadius must be >= 0");
+
+        base.OnParametersSet();
+    }
+
 }
 
 public enum GridPreset

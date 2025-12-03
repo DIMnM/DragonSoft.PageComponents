@@ -158,6 +158,16 @@ public partial class BaseCard
     /// Gibt den inline-style für den border-radius zurück
     /// </summary>
     private string BorderRadiusStyle => $"border-radius: {BorderRadius}px;";
+
+    protected override void OnParametersSet()
+    {
+        if (BorderRadius < 0)
+            throw new ArgumentOutOfRangeException(nameof(BorderRadius),
+                "BorderRadius must be >= 0");
+
+        base.OnParametersSet();
+    }
+
 }
 
 /// <summary>
